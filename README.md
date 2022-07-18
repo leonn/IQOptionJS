@@ -31,15 +31,12 @@ this.api = new IQOptionAPI({ email: email, password: password, account_type: acc
 this.api.Connect().then(async (resposta) => {
     if (resposta == null) {
         cosole.log("Não foi possível se conectar");
-        this.api = null;
     } else if (resposta == false) {
         cosole.log("Voce foi desconectado");
-        this.api = null;
     } else if (resposta == true) {
         cosole.log("Conectado com sucesso");
     } else {
         cosole.log("Algo de errado ocorreu, tente novamente mais tarde");
-        this.api = null;
     }
 });
 ```
